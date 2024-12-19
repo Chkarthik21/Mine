@@ -1,0 +1,357 @@
+body {
+    background-color: #000;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }  
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+header {
+    background-color: rgb(32, 46, 49);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0,1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    margin-right: auto;
+    
+}
+
+.logo-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: blanchedalmond;
+}
+
+.header-button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ccc;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 39px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+
+
+.header-button:hover {
+    background-color: #dfe3e677;
+    color: rgb(162, 204, 10);
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+
+
+.section-container {
+  min-height: 80vh;
+  max-width: 100vh;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.photo-container {
+    flex: 1;
+}
+
+.profile-photo {
+    width: 350px;
+    max-width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.profile-photo:hover {
+    filter: grayscale(0%);
+    object-fit: cover;
+    transition: filter 1s step-start, transform 3s step-end;
+}
+
+.photo-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section {
+    background-color: var(--extra-light);
+}
+  
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+.subtitle {
+    letter-spacing: 2px;
+    color: #ccc;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+  
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+  
+.title span {
+    font-weight: bold;
+    color: #000;
+    animation: color-change 1s infinite alternate,slide 4s infinite ease-in-out;
+    text-transform: uppercase;
+}
+
+@keyframes color-change {
+    0% {
+        color: #db1313;
+    }
+    50% {
+        color: #195ebf;
+    }
+    100% {
+        color: #da1484;
+    }
+}
+
+@keyframes slide {
+    0%,100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+  
+.description {
+    line-height: 1.5rem;
+    color: #f9f7f7;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.gallery-section {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.gallery-section h1 {
+    color: #e6e4e6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery-images {
+   flex: 1;
+}
+
+.photo {
+    width: 350px;
+    max-width: 300px;
+    height: 350px;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.skill-container h1{
+    color: #eae4e4;
+    font-weight: bold;
+}
+
+.skill-title {
+    font-size: 1,5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skill-title {
+    color: #eae4e4;
+    text-align: center;
+}
+
+.skill-pic {
+    margin-left: 200px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 3s ease;
+}
+
+.skill-pic:hover {
+       transform: scale(1.1);
+}
+
+.skill-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.3;
+    text-align: center;
+}
+
+#certifications {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.certifications h1{
+    color: #ccc;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.certification-item {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certification-item img {
+    max-width: 100px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.certification-item img:hover {
+    transform: scale(1.1);
+}
+
+.certification-item {
+    display: flex;
+}
+
+.certification-item h3{
+    font-size: 1.5em;
+    color: #333;
+}
+
+.certification-item p {
+    color: #666;
+}
+
+.contact h2 {
+    color: #ccc;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* space between icons */
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Scale the icon on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.social-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .social-icons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
